@@ -1,5 +1,6 @@
 class PlayerActionsController < ApplicationController
   before_action :set_player_action, only: [:show, :edit, :update, :destroy]
+  protect_from_forgery except: :create # TODO - Add some type of protection for create (like a real REST API)
 
   # GET /player_actions
   # GET /player_actions.json
